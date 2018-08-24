@@ -8,16 +8,44 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+db/*.sqlite3
 /db/*.sqlite3-journal
-
-# Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
 
-/node_modules
-/yarn-error.log
+# various artifacts
+*.sassc
+.sass-cache
+/config/config.yml
+/coverage.data
+/coverage/
+/db/*.sqlite3
+/public/cache
+/public/stylesheets/compiled
+/public/system/*
+/spec/tmp/*
+/cache
+/gems
 
-.byebug_history
+
+# Mac finder artifacts
+.DS_Store
+
+# Netbeans project directory
+/nbproject/
+
+# RubyMine project files
+.idea
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+
+# Environment files that may contain sensitive data
+.env
+.powenv
+
+# tilde files are usually backup files from a text editor
+*~
