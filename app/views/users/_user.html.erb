@@ -9,9 +9,11 @@
   <% end %>
 </td>
 
-<td>
-  <%= link_to('Delete user',
-              user_path(user),
-              data: { confirm: 'Are you sure?' },
-              method: :delete) unless user == current_user %>
-</td>
+<% unless user == current_user %>
+  <td>
+    <%= button_to('Delete user',
+        user_path(user),
+        data: { confirm: 'Are you sure?' },
+        method: :delete) %>
+  </td>
+<% end %>
