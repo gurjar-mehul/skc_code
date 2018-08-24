@@ -1,4 +1,8 @@
 <td>
+  <%= user&.name %>
+</td>
+
+<td>
   <%= link_to user.email, user %>
 </td>
 
@@ -9,11 +13,8 @@
   <% end %>
 </td>
 
-<% unless user == current_user %>
-  <td>
-    <%= button_to('Delete user',
-        user_path(user),
-        data: { confirm: 'Are you sure?' },
-        method: :delete) %>
-  </td>
-<% end %>
+<td>
+  <% unless user == current_user %>
+    <%= button_to 'Delete user', user_path(user), method: :delete %>
+  <% end %>
+</td>
