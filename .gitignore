@@ -26,6 +26,7 @@ db/*.sqlite3
 /spec/tmp/*
 /cache
 /gems
+/config/secrets.yml
 
 
 # Mac finder artifacts
