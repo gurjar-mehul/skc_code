@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :find_user, only: [:show, :update, :destroy]
 
   def index
-    @users = User.all
+    @users = User.page(page_count).per(per_page)
   end
 
   def show
